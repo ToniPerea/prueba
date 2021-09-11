@@ -1,17 +1,40 @@
-import './Login.css'
+import "./Login.css";
+import {
+  Form,
+  Container,
+  Navbar,
+  Button,
+  Card,
+  Row,
+  Col,
+} from "react-bootstrap";
+import CardComponet from "./Card";
 
 const Login = (props) => {
-    return (
-        <div className="pepe">
-            <h1>Inicie Sesion</h1>
-            <form action="/my-handling-form-page" method="post">
 
-                <label for="mail">Correo electrónico:</label>
-                <input type="email" id="mail" name="user_mail"/>
-  
-            </form>
-        </div>
-        )  
-}
+        
+  return (
+    <>
+    <CardComponet hijo={<Form>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control type="email" placeholder="Enter email" />
+          <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+          </Form.Text>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control type="password" placeholder="Password" />
+        </Form.Group>
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>}/>
+      
+    </>
+  );
+};
 
 export default Login;
