@@ -1,3 +1,6 @@
+
+import Exercise from "./Exercise";
+
 const ExerciseList = (props) => {
     const DEBUG =false;
     const ejercicios = 
@@ -13,7 +16,7 @@ return (
   <>
     {DEBUG && JSON.stringify(ejercicios)}
     {ejercicios.map((i) => {
-      return <CardComponet titulo={i.titulo} imagen={i.imagen} />;
+      return <Exercise titulo={i.titulo} imagen={i.imagen} />;
     })}
   </>
 );
